@@ -10,8 +10,13 @@ import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.componen
 import { FormUsuariosComponent } from './form-usuarios/form-usuarios.component';
 import { FormContatosComponent } from './form-contatos/form-contatos.component';
 import { NotFoundComponent } from './sharedComponents/not-found/not-found.component';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { FormGroupName } from '@angular/forms';
+import { SharedComponentsnavbarComponent } from './shared-componentsnavbar/shared-componentsnavbar.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +26,19 @@ import {MatCardModule} from '@angular/material/card';
     ListaUsuariosComponent,
     FormUsuariosComponent,
     FormContatosComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SharedComponentsnavbarComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

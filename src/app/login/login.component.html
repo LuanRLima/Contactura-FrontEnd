@@ -1,1 +1,24 @@
-<p>login works!</p>
+<section class="container-login">
+  <mat-card class="example-card">
+    <mat-card-title class="container-logo">
+      <img src="../../assets/img/LogoConcactura.png" alt="Logo do site da Concactura">
+    </mat-card-title>
+    
+      <mat-card-content>
+        <form class="example-form"[formGroup]="loginForm">
+            <mat-form-field class="example-full-width">
+              <mat-label input="email">Username</mat-label>
+              <input matInput formControlName="username" >
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password" >
+              </mat-form-field>     
+          </form>
+    </mat-card-content>
+    <mat-card-actions class="allignButtonsCenter">
+        <button mat-button >Entrar</button>
+    </mat-card-actions>
+  </mat-card>
+</section>
