@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contacts } from '../models/contacts';
 
 @Component({
   selector: 'app-lista-contatos',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-contatos.component.scss']
 })
 export class ListaContatosComponent implements OnInit {
-
+  concactsList: Contacts[];
+  collection = {count: 10, data: []};
   constructor() { }
 
   ngOnInit(): void {
+    this.populateContacts();
   }
 
-}
+  // método para preencher os contatos com dados mocados
+  populateContacts(){
+    for (let i = 0; i < this.collection.count ; i++) {
+      this.collection.data.push({
+        name: 'teste' + i,
+        email: 'email' + i + '@contactura.com', 
+        phone: '('+ 0 + 8 + 1 + ')' + 9 + i + i + i + i + '-' + i + i + i + i 
+      });
+    }  
+    this.concactsList = this.collection.data;
+    console.log(this.concactsList);
+  }
+  
+}  
+  

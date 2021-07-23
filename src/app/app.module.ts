@@ -15,8 +15,9 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
-import { FormGroupName } from '@angular/forms';
-import { SharedComponentsnavbarComponent } from './shared-componentsnavbar/shared-componentsnavbar.component';
+import { NavbarComponent } from './sharedComponents/navbar/navbar.component';
+import {MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SharedComponentsnavbarComponent } from './shared-componentsnavbar/share
     FormUsuariosComponent,
     FormContatosComponent,
     NotFoundComponent,
-    SharedComponentsnavbarComponent
+    NavbarComponent
+    
     
   ],
   imports: [
@@ -38,7 +40,8 @@ import { SharedComponentsnavbarComponent } from './shared-componentsnavbar/share
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule
 
   ],
   providers: [],

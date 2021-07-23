@@ -11,7 +11,7 @@ import { NotFoundComponent } from './sharedComponents/not-found/not-found.compon
 const routes: Routes = [
 {path: '', redirectTo: '/login', pathMatch: 'full'},
 {path: 'login', component: LoginComponent},
-{path: 'lista-contaos', component: ListaContatosComponent, canActivate: [AuthGuard]},
+{path: 'lista-contatos', component: ListaContatosComponent, canActivate: [AuthGuard]},
 {path: 'lista-usuarios', component: ListaUsuariosComponent, canActivate: [AuthGuard]},
 {path: 'cadastro-contaos', component: FormContatosComponent, canActivate: [AuthGuard]},
 {path: 'cadastro-usuarios', component: FormUsuariosComponent, canActivate: [AuthGuard]},

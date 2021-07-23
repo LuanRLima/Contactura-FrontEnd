@@ -7,8 +7,8 @@
       <mat-card-content>
         <form class="example-form"[formGroup]="loginForm">
             <mat-form-field class="example-full-width">
-              <mat-label input="email">Username</mat-label>
-              <input matInput formControlName="username" >
+              <mat-label >Username</mat-label>
+              <input type="email" matInput formControlName="username" >
             </mat-form-field>
           
             <mat-form-field class="example-full-width">
@@ -18,7 +18,7 @@
           </form>
     </mat-card-content>
     <mat-card-actions class="allignButtonsCenter">
-        <button mat-button >Entrar</button>
+        <button  mat-button (click)="login()" >Entrar</button>
     </mat-card-actions>
   </mat-card>
 </section>
