@@ -1,1 +1,37 @@
-<p>lista-usuarios works!</p>
+<app-navbar></app-navbar>
+<section>
+    <div class="container_title">
+        <h1>USUÁRIOS</h1>
+    </div>    
+</section>
+<section>
+    <div class="container_buttons">
+        <button mat-raised-button color= "primary">Primary</button>
+    </div>
+</section>
+<section>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Admin</th>
+                    <th>menu</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let user of usersList">
+                    <td data-label="Nome">{{user.name}}</td>
+                    <td data-label="Email">{{user.username}}</td>
+                    <td data-label="Fone">{{user.password}}</td>
+                    <td data-label="Fone">{{user.admin}}</td>
+                    <td>menu</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

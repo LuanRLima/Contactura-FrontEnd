@@ -1,0 +1,40 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);;
+    grid-gap: 1em;
+    
+
+}
+
+.title{
+    grid-area: 1 / 2 / 1 / 4;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+     
+}
+
+.form-cadastro-usuarios{
+    grid-area: 2 / 1 / 4 / 5 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5em;
+    align-items: end;
+
+}
+.campo{
+    display:block;
+    width: 42vw;
+    height: 2em;
+    margin-top:0.3em;
+    border-color: rgb(219, 217, 217);
+    border-radius: 0.3em;
+    border-width: 1px;
+}
+
+.button-salvar{
+    width: 10.5vw;
+    font-size: 1em;
+    font-family: roboto;
+}

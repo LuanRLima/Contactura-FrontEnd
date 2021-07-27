@@ -9,3 +9,27 @@
         <button mat-raised-button color= "primary">Primary</button>
     </div>
 </section>
+<section>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Fone</th>
+                    <th>menu</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let contact of contactsList">
+                    <td data-label="Nome">{{contact.name}}</td>
+                    <td data-label="Email">{{contact.email}}</td>
+                    <td data-label="Fone">{{contact.phone}}</td>
+                    <td>menu</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

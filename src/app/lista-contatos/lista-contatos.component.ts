@@ -7,7 +7,7 @@ import { Contacts } from '../models/contacts';
   styleUrls: ['./lista-contatos.component.scss']
 })
 export class ListaContatosComponent implements OnInit {
-  concactsList: Contacts[];
+  contactsList: Contacts[];
   collection = {count: 10, data: []};
   constructor() { }
 
@@ -24,8 +24,8 @@ export class ListaContatosComponent implements OnInit {
         phone: '('+ 0 + 8 + 1 + ')' + 9 + i + i + i + i + '-' + i + i + i + i 
       });
     }  
-    this.concactsList = this.collection.data;
-    console.log(this.concactsList);
+    console.log(this.contactsList);
+    this.contactsList = this.collection.data;
   }
   
 }  
