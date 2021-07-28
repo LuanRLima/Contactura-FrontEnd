@@ -1,31 +1,36 @@
 .container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);;
+    grid-template-rows:  auto auto;
     grid-gap: 1em;
     
 
 }
 
 .title{
-    grid-area: 1 / 2 / 1 / 4;
     display: grid;
+    grid-row-start: 1;
     justify-content: center;
     align-items: center;
      
 }
 
-.form-cadastro-usuarios{
-    grid-area: 2 / 1 / 4 / 5 ;
+.container-form{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto ;
     grid-gap: 1.5em;
     align-items: end;
 
 }
+.container-input{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-gap: 1.5em;
+    justify-content:center;
+}
 .campo{
     display:block;
-    width: 42vw;
+    width: 47vw;
     height: 2em;
     margin-top:0.3em;
     border-color: rgb(219, 217, 217);
@@ -34,8 +39,8 @@
 }
 
 .button-salvar{
-    display: inline-block;
     width: 10.5vw;
-    font-size: 1em;
+    font-size: 1.2vw;
+    margin-left: 1.25vw;
     
 }
