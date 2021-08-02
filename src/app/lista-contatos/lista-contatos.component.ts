@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { Contacts } from '../models/contacts';
+import { ContatosService } from '../service/contatos/contatos.service';
 
 @Component({
   selector: 'app-lista-contatos',
@@ -9,7 +12,7 @@ import { Contacts } from '../models/contacts';
 export class ListaContatosComponent implements OnInit {
   contactsList: Contacts[];
   collection = {count: 10, data: []};
-  constructor() { }
+  constructor(public contactService: ContatosService, private router: Router) { }
 
   ngOnInit(): void {
     this.populateContacts();
@@ -24,8 +27,33 @@ export class ListaContatosComponent implements OnInit {
         phone: '('+ 0 + 8 + 1 + ')' + 9 + i + i + i + i + '-' + i + i + i + i 
       });
     }  
-    console.log(this.contactsList);
     this.contactsList = this.collection.data;
+    console.log(this.contactsList);
+  }
+  editContacts(contatos: Contacts){
+    console.log('edit esta funcinado', contatos);
+    this.contactService.getContactsList(contatos);
+    this.router.navigate(['/cadastro-contatos']);
+
+  }
+
+  deleteContacts(contatos: Contacts){
+    Swal.fire({
+      title: 'Você tem certeza?',
+      text:'Deseja mesmo deletar?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sim',
+      cancelButtonText: 'Não'
+    }).then((result) => { 
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deletando com sucesso',
+          );
+       }
+    });
   }
   
 }  
