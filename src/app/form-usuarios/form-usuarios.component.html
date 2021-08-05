@@ -22,7 +22,8 @@
 					<input formControlName="name" name="name" type="text">
 				</div>
 				<div>
-					 <input type="checkbox" name="Administrador?">
+					 <input formControlName="admin" id="checkbox" type="checkbox" value= "on" class="checkbox">
+					 <label for="admin"> Administrador?</label>
 				</div>	
 				<div>
 					<button mat-raised-button  color= "primary" (click)="save()">Salvar Contato</button>

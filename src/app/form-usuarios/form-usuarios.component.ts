@@ -16,7 +16,7 @@ export class FormUsuariosComponent implements OnInit {
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
-    admin: new FormControl('', [Validators.required, ])
+    admin: new FormControl('')
 
 
   });
@@ -42,7 +42,11 @@ export class FormUsuariosComponent implements OnInit {
       title: 'Eeeba..',
       text:'Usuário criado com sucesso!'
     });
-    this.router.navigate(['/lista-usuarios']);
+        this.formUsuarios.get('name').setValue("");
+        this.formUsuarios.get('email').setValue("");
+        this.formUsuarios.get('password').setValue("");
+        this.formUsuarios.get('admin').setValue("");
+         this.router.navigate(['/lista-usuarios']);
   }else{
     Swal.fire({
       icon: 'error',
