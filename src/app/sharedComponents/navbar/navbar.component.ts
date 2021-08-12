@@ -14,12 +14,20 @@ export class NavbarComponent implements OnInit {
     this.putEvenetsMenu();
   }
 
+  ngOnDestroy(): void {
+    this.refresh();
+  }
+
   putEvenetsMenu(){
     const menuDesktop = document.getElementById('menu-desktop');
     const menuMobile = document.getElementById('menu-mobile');
     menuMobile.addEventListener('click', function(){
       menuDesktop.classList.toggle('active'); 
     });
+  }
+
+  refresh(){
+    window.location.reload()
   }
 
   logout(){

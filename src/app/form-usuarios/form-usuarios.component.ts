@@ -34,6 +34,7 @@ export class FormUsuariosComponent implements OnInit {
     }
   })
   }
+  
 
   save(){
     if(this.formUsuarios.valid){
@@ -46,7 +47,7 @@ export class FormUsuariosComponent implements OnInit {
         this.formUsuarios.get('email').setValue("");
         this.formUsuarios.get('password').setValue("");
         this.formUsuarios.get('admin').setValue("");
-         this.router.navigate(['/lista-usuarios']);
+        this.router.navigate(['/lista-usuarios']);
   }else{
     Swal.fire({
       icon: 'error',

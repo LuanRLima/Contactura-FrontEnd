@@ -23,7 +23,7 @@ export class ListaUsuariosComponent implements OnInit {
     for (let i = 0; i < this.collection.count; i++) {
       this.collection.data.push({ 
         name: 'nome' + i,
-        email: 'username' + i,
+        email: 'email' + i + '@gmail.com',
         password: 'password' + i,
         admin: true 
 

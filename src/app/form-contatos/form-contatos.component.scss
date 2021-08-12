@@ -25,11 +25,32 @@
     }
 }
 
+
+    
 @media screen and (max-width:767px) {
+    
+    
     .grid-container{
         display: grid;
         grid-template-columns: auto;
-        grid-gap: 1.5em;
-        margin: 20px;
+        justify-content: center;
+        margin-right:  11em;
+        margin-left: 5em;
+        grid-gap: 0em;
+        margin: 0;
+        
+       
+       
     }
-}   
+
+    .grid-container-email{
+    
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        margin-right:  11em;
+        margin-left: 10em;
+        grid-gap: 1em;
+        margin: 0;
+    }
+}
