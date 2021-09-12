@@ -14,9 +14,9 @@ export class NavbarComponent implements OnInit {
     this.putEvenetsMenu();
   }
 
-  ngOnDestroy(): void {
+  /*ngOnDestroy(): void {
     this.refresh();
-  }
+  }*/
 
   putEvenetsMenu(){
     const menuDesktop = document.getElementById('menu-desktop');
@@ -26,9 +26,9 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  refresh(){
+  /*refresh(){
     window.location.reload()
-  }
+  }*/
 
   logout(){
     localStorage.removeItem('token');

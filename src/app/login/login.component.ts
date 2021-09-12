@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import {Router } from '@angular/router';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-
+import { Authentication } from '../models/user';
+import { UsuariosService } from '../service/usuarios/usuarios.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,18 +16,28 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', [Validators.required])
   }); 
 
-  constructor(private router: Router) { }
+  authentication: Authentication;
+
+  constructor(private router: Router, public usuariosService: UsuariosService) { }
 
   ngOnInit(): void {
+    console.log('Deusmeajuda')
   }
 
   login(){
     if(this.loginForm.valid){
-      localStorage.setItem('token', 'fucturasupertop');
-      localStorage.setItem('admin', 'true');
-      this.router.navigate(['/lista-contatos']);
-    }
-    else{
+    this.authentication = this.loginForm.value;
+    this.usuariosService.authentication(this.authentication).subscribe(
+      data => {
+        console.log(data)
+        localStorage.setItem('token', data);
+        localStorage.setItem('admin', 'true');
+        localStorage.setItem('username', this.authentication.username);
+        localStorage.setItem('password',  this.authentication.password);
+        this.router.navigate(['/lista-contatos']);
+      }
+    );
+    }else{
       Swal.fire({
         icon: 'error',
         title: 'Oops..',

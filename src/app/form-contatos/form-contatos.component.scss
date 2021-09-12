@@ -4,7 +4,7 @@
     margin-top: 20px;
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 3.5em;
@@ -14,7 +14,8 @@
         width: 100%;
     }
 }
-.grid-container-email{
+
+.grid_container_email{
     display: grid;
     grid-template-columns: auto;
     grid-gap: 2.5em;
@@ -25,32 +26,13 @@
     }
 }
 
+@media screen and (max-width: 767px){
 
-    
-@media screen and (max-width:767px) {
-    
-    
     .grid-container{
         display: grid;
         grid-template-columns: auto;
-        justify-content: center;
-        margin-right:  11em;
-        margin-left: 5em;
-        grid-gap: 0em;
-        margin: 0;
-        
-       
-       
+        grid-gap: 1.5em;
+        margin: 20px;
     }
 
-    .grid-container-email{
-    
-        display: grid;
-        grid-template-columns: auto;
-        justify-content: center;
-        margin-right:  11em;
-        margin-left: 10em;
-        grid-gap: 1em;
-        margin: 0;
-    }
 }

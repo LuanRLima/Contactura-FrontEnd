@@ -11,7 +11,6 @@
     button{
         margin-left: 15px;
     }
-
 }
 
 table{
@@ -22,9 +21,10 @@ table{
     width: 100%;
     table-layout: fixed;
 }
+
 table tr{
     background-color: #f8f8f8;
-    border: 1px solid #fff;
+    border: 1px solid #ddd;
 }
 
 thead tr{
@@ -32,20 +32,20 @@ thead tr{
     color: #fff;
 }
 
-table td,
-table th{
-    padding: .625em;
-    text-align: center;
+table th, 
+table td{
+padding: .625em;
+text-align: center;
 }
+
 table th{
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
-        
 }
+
 .container_buttons_table{
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
-    
 }

@@ -1,27 +1,31 @@
 <app-navbar></app-navbar>
+<!-- titulo da lista de contatos -->
 <section>
     <div class="container_title">
         <h1>CONTATOS</h1>
-    </div>    
-</section>
-<section>
-    <div class="container_buttons">
-        <button routerLink="/cadastro-contatos" mat-raised-button color= "primary">Criar Contato</button>
-        <button routerLink="/cadastro-usuarios" mat-raised-button color= "primary">Criar Usuário</button>
     </div>
 </section>
+<!-- Botao de adicionar contato -->
+<section>
+    <div class="container_buttons">
+        <button routerLink="/cadastro-contatos" mat-raised-button color="primary">Criar Contato</button>
+        <button mat-raised-button color="primary">Criar Usuário</button>
+    </div>
+</section>
+<!-- Tabela de lista de contatos -->
 <section>
     <div>
         <table>
+            <!-- thead -->
             <thead>
                 <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Fone</th>
-                    <th>menu</th>
+                   <th scope="col">Nome</th>
+                   <th scope="col">Email</th>
+                   <th scope="col">Fone</th>
+                   <th>menu</th>
                 </tr>
             </thead>
-
+            <!-- tbody -->
             <tbody>
                 <tr *ngFor="let contact of contactsList">
                     <td data-label="Nome">{{contact.name}}</td>
@@ -29,9 +33,8 @@
                     <td data-label="Fone">{{contact.phone}}</td>
                     <td><div class="container_buttons_table">
                         <mat-icon (click)="deleteContacts(contact)">delete</mat-icon>
-                        <mat-icon (click)="editContacts(contact)" >edit</mat-icon>
+                        <mat-icon (click)="editContatos(contact)">edit</mat-icon>
                     </div></td>
-
                 </tr>
             </tbody>
         </table>
