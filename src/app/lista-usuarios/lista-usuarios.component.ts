@@ -33,7 +33,7 @@ export class ListaUsuariosComponent implements OnInit {
   }
   editUsuarios(usuarios: User){
     console.log('edit esta funcinado', usuarios);
-    this.userService.getUsuariosList(usuarios);
+    this.userService.getUsersList(usuarios);
     this.router.navigate(['/cadastro-usuarios']);
 
   }

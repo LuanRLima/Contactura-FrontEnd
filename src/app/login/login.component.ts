@@ -20,18 +20,16 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router, public usuariosService: UsuariosService) { }
 
-  ngOnInit(): void {
-    console.log('Deusmeajuda')
-  }
+  ngOnInit(): void { }
 
   login(){
     if(this.loginForm.valid){
     this.authentication = this.loginForm.value;
     this.usuariosService.authentication(this.authentication).subscribe(
       data => {
-        console.log(data)
-        localStorage.setItem('token', data);
-        localStorage.setItem('admin', 'true');
+        console.log(data);
+        localStorage.setItem('admin', data.admin);
+        localStorage.setItem('token', data.token);
         localStorage.setItem('username', this.authentication.username);
         localStorage.setItem('password',  this.authentication.password);
         this.router.navigate(['/lista-contatos']);
@@ -41,10 +39,10 @@ export class LoginComponent implements OnInit {
       Swal.fire({
         icon: 'error',
         title: 'Oops..',
-        text: 'Login ou senha invlidos'
+        text: 'Login ou senha inválidos'
       }
 
-      )
+      );
     }
   }
 
